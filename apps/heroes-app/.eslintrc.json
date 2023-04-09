@@ -1,10 +1,18 @@
 {
   "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
+  "ignorePatterns": ["**/*.js"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "rules": {
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "implicit-arrow-linebreak": "error",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-function": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],
