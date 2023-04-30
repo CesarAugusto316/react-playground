@@ -9,6 +9,7 @@ import HeroesApp from '../heroes/heroesApp';
 
 
 export const router = createBrowserRouter([
+  // this could be set inside heroes folder
   {
     path: '/',
     element: <HeroesApp />,
